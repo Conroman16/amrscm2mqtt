@@ -118,8 +118,7 @@ mqtt:
       device_class: gas
       unit_of_measurement: 'ft³'
       unique_id: total_gas_consumption_cf
-      state_class: measurement
-      last_reset_value_template: '1970-01-01T00:00:00+00:00'
+      state_class: total_increasing
 ```
 
 ## Testing
