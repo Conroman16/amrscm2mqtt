@@ -1,0 +1,14 @@
+[Unit]
+Description=AMR SCM to MQTT
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/opt/amridm2mqtt/amrscm2mqtt
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=amrscm2mqtt
+
+[Install]
+WantedBy=multi-user.target
