@@ -67,7 +67,6 @@ while True:
 
         # Proper SCM results have 9 fields
         if len(flds) != 9:
-        	print(f"Received data frame with different number of fields: {len(flds)}")
             continue
 
         # Make sure the meter id is one we want
