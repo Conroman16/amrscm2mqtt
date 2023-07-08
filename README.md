@@ -109,7 +109,7 @@ Start amrscm2mqtt service
 
 ### Configure Home Assistant
 
-To use these values in Home Assistant,
+To use these values in Home Assistant, configure the MQTT broker extension to connect to your server of choice, then place the following in configuration.yaml:
 ```
 mqtt:
   sensor:
