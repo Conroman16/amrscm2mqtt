@@ -1,5 +1,7 @@
 FROM debian:bookworm-slim
 
+WORKDIR /amrscm2mqtt
+
 # Install software
 RUN apt update && \
 	apt install --no-install-recommends -y \
@@ -9,15 +11,18 @@ RUN apt update && \
 		librtlsdr-dev \
 		python3-paho-mqtt \
 		rtl-sdr \
+		python3 \
 	&& rm -rfv /var/cache/apt/* \
 	&& rm -rfv /var/lib/apt/*
 
-# Grab rtlamr
-RUN go get github.com/bemasher/rtlamr
+# Set up rtlamr
+ENV GOPATH=/amrscm2mqtt/go
+ENV PATH=$PATH:$GOPATH/bin
+RUN go install github.com/bemasher/rtlamr@latest
 
 # Copy files into place
 COPY * /amrscm2mqtt/
-COPY settings.py /amrscm2mqtt/settings.py
+COPY settings_template.py /amrscm2mqtt/settings.py
 
 # Set the entrypoint
-ENTRYPOINT ["/amrscm2mqtt/amrscm2mqtt"]
+CMD ["/amrscm2mqtt/amrscm2mqtt"]
