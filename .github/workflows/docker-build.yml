@@ -55,4 +55,4 @@ jobs:
           push: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          attest: type=provenance,mode=max
+          provenance: mode=max
