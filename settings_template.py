@@ -22,7 +22,7 @@ MQTT_USER = os.getenv('MQTT_USER', '')
 MQTT_PASSWORD = os.getenv('MQTT_PASSWORD', '')
 
 # path to rtlamr
-RTLAMR = os.getenv('RTLAMR_PATH', '/usr/local/bin/rtlamr')
+RTLAMR = os.getenv('RTLAMR', '/amrscm2mqtt/go/bin/rtlamr')
 
 # path to rtl_tcp
-RTL_TCP = os.getenv('RTL_TCP_PATH', '/usr/bin/rtl_tcp')
+RTL_TCP = os.getenv('RTL_TCP', '/usr/bin/rtl_tcp')
