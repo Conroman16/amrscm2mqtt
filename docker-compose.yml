@@ -1,0 +1,9 @@
+services:
+  amrscm2mqtt:
+    image: ghcr.io/conroman16/amrscm2mqtt:latest
+    env_file: amrscm2mqtt.env
+    network_mode: host
+    security_opt:
+      - seccomp:unconfined
+    devices:
+      - /dev/bus/usb:/dev/bus/usb
