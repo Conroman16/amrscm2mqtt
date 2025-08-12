@@ -7,3 +7,4 @@ services:
       - seccomp:unconfined
     devices:
       - /dev/bus/usb:/dev/bus/usb
+    privileged: true

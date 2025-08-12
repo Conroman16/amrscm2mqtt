@@ -56,7 +56,7 @@ time.sleep(5)
 
 # Start rtlamr
 print("Starting rtlamr...")
-rtlamr_cmd = [settings.RTLAMR, '-msgtype=scm', '-format=csv']
+rtlamr_cmd = [settings.RTLAMR, '-msgtype=scm', '-format=csv', '> /var/log/rtlamr.log 2>&1']
 rtlamr = subprocess.Popen(rtlamr_cmd, stdout=subprocess.PIPE, universal_newlines=True)
 print("rtlamr startup complete")
 
