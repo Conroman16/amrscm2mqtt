@@ -9,9 +9,10 @@ RUN apt update && \
 		git \
 		golang \
 		librtlsdr-dev \
-		python3-paho-mqtt \
-		rtl-sdr \
 		python3 \
+		python3-paho-mqtt \
+		procps \
+		rtl-sdr \
 	&& rm -rfv /var/cache/apt/* \
 	&& rm -rfv /var/lib/apt/*
 
