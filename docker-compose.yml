@@ -3,8 +3,8 @@ services:
     image: ghcr.io/conroman16/amrscm2mqtt:latest
     env_file: amrscm2mqtt.env
     network_mode: host
+    privileged: true
     security_opt:
       - seccomp:unconfined
     devices:
       - /dev/bus/usb:/dev/bus/usb
-    privileged: true
