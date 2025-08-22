@@ -48,7 +48,7 @@ def send_mqtt(topic, payload,):
 
 # Start rtl_tcp
 print("Starting rtl_tcp...")
-rtltcp = subprocess.Popen([f"{settings.RTL_TCP} > /dev/null 2>&1 &"], shell=True, stdin=None, stdout=None, stderr=None, close_fds=True)
+rtltcp = subprocess.Popen([f"{settings.RTL_TCP} -a 0.0.0.0 > /dev/null 2>&1 &"], shell=True, stdin=None, stdout=None, stderr=None, close_fds=True)
 print("rtl_tcp startup complete")
 
 # Sleep for a moment for rtl_tcp to start up
