@@ -24,5 +24,8 @@ RUN go install github.com/bemasher/rtlamr@latest
 COPY * /amrscm2mqtt/
 COPY settings_template.py /amrscm2mqtt/settings.py
 
+# Prevent kernel from claiming RTL-SDR
+RUN echo "blacklist dvb_usb_rtl28xxu" > /etc/modprobe.d/rtl-sdr.conf
+
 # Set the entrypoint
 CMD ["/amrscm2mqtt/amrscm2mqtt"]
