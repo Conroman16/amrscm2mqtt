@@ -29,4 +29,4 @@ COPY settings_template.py /amrscm2mqtt/settings.py
 RUN echo "blacklist dvb_usb_rtl28xxu" > /etc/modprobe.d/rtl-sdr.conf
 
 # Set the entrypoint
-CMD ["/amrscm2mqtt/amrscm2mqtt", "> /var/log/amrscm2mqtt.log 2>&1"]
+CMD ["/amrscm2mqtt/amrscm2mqtt"]
