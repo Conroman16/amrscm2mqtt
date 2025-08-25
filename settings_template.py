@@ -15,7 +15,7 @@ else:
 MQTT_HOST = os.getenv('MQTT_HOST', '127.0.0.1')
 MQTT_PORT = int(os.getenv('MQTT_PORT', '1883'))
 MQTT_USER = os.getenv('MQTT_USER', '')
-MQTT_PASSWORD = os.getenv('MQTT_PASSWORD', '')
+MQTT_PASSWORD = os.getenv('MQTT_PASS', '')
 
 # RTLAMR settings
 RTLAMR = os.getenv('RTLAMR', '/amrscm2mqtt/go/bin/rtlamr')
