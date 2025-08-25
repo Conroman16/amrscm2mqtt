@@ -6,7 +6,7 @@ import os
 # or multiple entries - [12345678, 98765432, 12340123]
 env_meters = os.getenv('WATCHED_METERS')
 if env_meters:
-    WATCHED_METERS = [m.strip() for m in env_meters.split(',')]
+    WATCHED_METERS = [int(m.strip()) for m in env_meters.split(',')]
 else:
     WATCHED_METERS = []
 
