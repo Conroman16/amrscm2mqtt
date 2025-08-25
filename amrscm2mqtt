@@ -65,13 +65,9 @@ while True:
         amrline = rtlamr.stdout.readline().strip()
         flds = amrline.split(',')
 
-        print("Received line")
-
         # Proper SCM results have 9 fields
         if len(flds) != 9:
             continue
-
-        print("Received valid AMR line")
 
         # Make sure the meter id is one we want
         meter_id = int(flds[3])
@@ -81,9 +77,9 @@ while True:
         # Extract current meter reading
         current_meter_reading = int(flds[7])
 
-        print(f"Sending meter {meter_id} reading: {current_meter_reading}")
+        debug_print(f"Sending meter {meter_id} reading: {current_meter_reading}")
         send_mqtt(f"readings/{meter_id}/meter_reading", str(current_meter_reading))
 
     except Exception as e:
-        print('Exception squashed! {}: {}', e.__class__.__name__, e)
+        debug_print('Exception squashed! {}: {}', e.__class__.__name__, e)
         time.sleep(2)
