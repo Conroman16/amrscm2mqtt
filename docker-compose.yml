@@ -1,5 +1,6 @@
 services:
   amrscm2mqtt:
+    container_name: amrscm2mqtt
     image: ghcr.io/conroman16/amrscm2mqtt:latest
     env_file: amrscm2mqtt.env
     network_mode: host
