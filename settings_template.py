@@ -11,7 +11,7 @@ else:
     WATCHED_METERS = []
 
 # MQTT Server settings
-# If no authentication, leave MQTT_USER and MQTT_PASSWORD empty
+# If no authentication, leave MQTT_USER and MQTT_PASS empty
 MQTT_HOST = os.getenv('MQTT_HOST', '127.0.0.1')
 MQTT_PORT = int(os.getenv('MQTT_PORT', '1883'))
 MQTT_USER = os.getenv('MQTT_USER', '')

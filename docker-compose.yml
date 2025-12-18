@@ -8,3 +8,4 @@ services:
       - seccomp:unconfined
     devices:
       - /dev/bus/usb:/dev/bus/usb
+    restart: unless-stopped
