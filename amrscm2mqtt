@@ -57,7 +57,7 @@ time.sleep(5)
 
 # Start rtlamr
 print("Starting rtlamr...")
-rtlamr_cmd = [settings.RTLAMR, f'-msgtype={settings.RTLAMR_MSGTYPE}', '-format=json']
+rtlamr_cmd = [settings.RTLAMR, '-msgtype=all', '-format=json', '-tunergainmode=false']
 rtlamr = subprocess.Popen(rtlamr_cmd, stdout=subprocess.PIPE, universal_newlines=True)
 print("rtlamr startup complete")
 
